@@ -1,0 +1,38 @@
+# Polymer Doctor
+
+> Polymer Diagnostics & Research Center (PDRC) — a Delhi-based polymer testing, diagnostics and consultancy company serving processors, recyclers, compounders and product manufacturers across India and internationally.
+
+Polymer Doctor diagnoses the root cause of polymer failures and prescribes a workable fix — not just a pass/fail lab report. Founded and led by CEO Harshita.
+
+## Services
+
+- Polymer identification (FTIR spectroscopy, DSC cross-check, density & burn-test triage)
+- Rheological testing (Melt Flow Index / MFI, capillary & rotational rheometry)
+- Thermal analysis (DSC, TGA, HDT & Vicat softening point)
+- Mechanical testing (tensile, flexural, impact, hardness, fatigue)
+- Compositional analysis (ash & filler content, contaminant screening, additive ratios)
+- Color & optical testing (L*a*b*, haze, gloss)
+- Failure analysis (microscopy, fractography, root-cause investigation)
+- Physical properties (density, specific gravity, bulk density, granule uniformity)
+- Bio-compostable plastic testing (per IS 17088 / ASTM D6400)
+- Polymer consultancy and formulation: MFI modification, coupling agents, flame retardants, oxo-biodegradable additives, exothermic foaming agents, elastomer & rubber compounding
+
+## Products
+
+- MFI Reducer — additive that lowers MFI in pipe-grade HDPE for improved impact strength and ESCR, at roughly 1% dosage
+- PP MFI Enhancer — additive that raises MFI in recycled PP film and raffia scrap, making it suitable for injection molding (thin-wall containers, large-format parts, rope, chairs/furniture)
+
+## Reference material
+
+- Polymer Guide: identification specs, solubility, specification standards, processing parameters, and verified invention history for 21+ industrial polymers (LDPE, HDPE, PP, PVC, PS, PET, PC, Nylon, ABS, PMMA, PLA, PU, EVA, POM, PTFE, TPU, EPDM, Natural Rubber, NBR, Silicone Rubber, PBAT)
+- Testing Capabilities: full list of tests performed, with equipment used and why each test matters
+
+## Contact
+
+- General enquiries: pdrc.doctor@gmail.com / polymerdoctors@gmail.com
+- Research & Innovation enquiries: Harshita, Chief Executive Officer — WhatsApp +91 96257 04010, or email
+- Sample requests & purchase orders: Singhal Plastics (authorised agent), Narela, Delhi 110040 — singhalplastics1986@gmail.com, +91 93136 36358
+
+## Location
+
+Narela, Delhi 110040, India. Serves clients across India and internationally.
