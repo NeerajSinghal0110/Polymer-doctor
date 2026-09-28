@@ -601,8 +601,16 @@
   .product-photo img { display: block; width: 100%; height: auto; min-height: 250px; object-fit: cover; }
   .product-photo figcaption { padding: 12px 16px; color: var(--ink-faint); font-size: 12px; }
   .product-note { font-size: 13px; color: var(--ink-faint); max-width: 65ch; }
+  .product-range { margin-bottom: 56px; }
+  .product-range h3 { font-size: clamp(24px, 2.7vw, 32px); margin-bottom: 18px; }
+  .product-range-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .product-range-item { background: var(--card); border: 1px solid var(--line-strong); border-radius: 4px; padding: 22px; }
+  .product-range-item h4 { font-family: 'Big Shoulders Display', sans-serif; font-size: 22px; margin: 0 0 8px; }
+  .product-range-item p { color: var(--ink-soft); font-size: 14px; margin: 0; }
   @media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .product-range-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .product-benefits { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .product-range-grid { grid-template-columns: 1fr; } }
 
   /* ---------- Industries ---------- */
   .industries { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
@@ -1345,11 +1353,22 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Products</h2>
-        <p>Practical additives for polymer processing and conversion.</p>
+        <p>Our existing additive range, with the new lamination adhesion additive added below.</p>
+      </div>
+      <div class="product-range">
+        <h3>Existing additive range</h3>
+        <div class="product-range-grid">
+          <article class="product-range-item"><h4>Coupling Agents</h4><p>For polymer blends and filled formulations.</p></article>
+          <article class="product-range-item"><h4>Flame Retardants</h4><p>Additive solutions for flame-retardant formulations.</p></article>
+          <article class="product-range-item"><h4>Silicone Additives</h4><p>Silicone-based performance additives for polymer processing.</p></article>
+          <article class="product-range-item"><h4>Oxo-biodegradable Additive Systems</h4><p>Part of our sustainability formulation work.</p></article>
+          <article class="product-range-item"><h4>Exothermic Foaming Agents</h4><p>For polymer foaming applications and formulation trials.</p></article>
+          <article class="product-range-item"><h4>MFI Modification</h4><p>Solutions to adjust melt flow for processing and recycling.</p></article>
+        </div>
       </div>
       <div class="product-layout">
         <div>
-          <p class="kicker">Extrusion coating &amp; lamination</p>
+          <p class="kicker">New addition · Extrusion coating &amp; lamination</p>
           <h2>Lamination Adhesion Additive</h2>
           <p class="product-lead">An adhesion additive for extrusion coating and lamination on paper, woven sacks and aluminium foil. Start with <strong>2% addition</strong> to the polymer coating formulation.</p>
           <div class="product-benefits">
@@ -1366,6 +1385,7 @@
           <figcaption>Illustrative view of a woven sack extrusion coating line.</figcaption>
         </figure>
       </div>
+
     </div>
   </section>
 
