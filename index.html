@@ -265,8 +265,8 @@
   @media (max-width: 640px) { .brand-tag { display: none; } }
   nav.links {
     display: flex;
-    gap: 30px;
-    font-size: 15px;
+    gap: 16px;
+    font-size: 14px;
     color: var(--ink-soft);
   }
   nav.links a { text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
@@ -590,6 +590,20 @@
     margin-top: 2px;
   }
 
+  /* ---------- Product detail ---------- */
+  .product-layout { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 44px; align-items: start; }
+  .product-lead { font-size: 18px; color: var(--ink-soft); max-width: 60ch; }
+  .product-benefits { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 28px 0; }
+  .product-benefit { background: var(--card); border: 1px solid var(--line-strong); border-radius: 4px; padding: 18px; }
+  .product-benefit strong { display: block; color: var(--teal); margin-bottom: 5px; }
+  .product-benefit span { color: var(--ink-soft); font-size: 14px; }
+  .product-photo { margin: 0; background: var(--card); border: 1px solid var(--line-strong); border-radius: 4px; overflow: hidden; }
+  .product-photo img { display: block; width: 100%; height: auto; min-height: 250px; object-fit: cover; }
+  .product-photo figcaption { padding: 12px 16px; color: var(--ink-faint); font-size: 12px; }
+  .product-note { font-size: 13px; color: var(--ink-faint); max-width: 65ch; }
+  @media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .product-benefits { grid-template-columns: 1fr; } }
+
   /* ---------- Industries ---------- */
   .industries { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
   .industry-card {
@@ -882,10 +896,18 @@
     .contact-grid { grid-template-columns: 1fr; }
     .symptom-row { grid-template-columns: 1fr; gap: 8px; }
   }
-  @media (max-width: 640px) {
+  @media (max-width: 1100px) {
     nav.links { display: none; }
     .menu-btn { display: inline-block; }
     .nav-cta { display: none; }
+    header.site.nav-open nav.links {
+      display: flex; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0; padding: 8px 20px 18px;
+      background: var(--bg); box-shadow: var(--shadow); max-height: calc(100vh - 80px); overflow-y: auto;
+    }
+    header.site.nav-open nav.links a { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  }
+  @media (max-width: 640px) {
     .process { grid-template-columns: 1fr; }
     .process-step { border-left: none !important; padding-left: 0 !important; border-top: 1px solid var(--line); padding-top: 20px; }
     .process-step:first-child { border-top: none; padding-top: 0; }
@@ -1182,6 +1204,7 @@
       <a href="#symptoms">What We Treat</a>
       <a href="#process">How We Work</a>
       <a href="#expertise">Expertise</a>
+      <a href="#products">Products</a>
       <a href="#testing">Testing</a>
       <a href="#polymers">Polymer Guide</a>
       <a href="#faq">FAQ</a>
@@ -1210,6 +1233,8 @@
       <p class="hero-banner-loc" style="margin-top:22px; font-size:13.5px;">Based in Delhi &mdash; working with plants across India and internationally.</p>
     </div>
   </section>
+
+
 
   <section class="diag-panel">
     <div class="wrap">
@@ -1315,6 +1340,34 @@
     </div>
   </section>
   </div>
+
+  <section id="products" class="reveal page">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Products</h2>
+        <p>Practical additives for polymer processing and conversion.</p>
+      </div>
+      <div class="product-layout">
+        <div>
+          <p class="kicker">Extrusion coating &amp; lamination</p>
+          <h2>Lamination Adhesion Additive</h2>
+          <p class="product-lead">An adhesion additive for extrusion coating and lamination on paper, woven sacks and aluminium foil. Start with <strong>2% addition</strong> to the polymer coating formulation.</p>
+          <div class="product-benefits">
+            <div class="product-benefit"><strong>Without corona treatment</strong><span>Designed to promote adhesion on suitable substrates without a separate corona treatment step.</span></div>
+            <div class="product-benefit"><strong>Higher filler loading</strong><span>Explore increased filler levels while maintaining the bond needed for your application.</span></div>
+            <div class="product-benefit"><strong>Reprocessed material</strong><span>Supports trials using reprocessed polymer in the coating blend.</span></div>
+            <div class="product-benefit"><strong>Three substrates</strong><span>Applications include paper, PP woven sacks and aluminium foil.</span></div>
+          </div>
+          <p class="product-note">Confirm dosage, peel strength and end-use performance in a production trial; results depend on the polymer, substrate, filler level and line conditions.</p>
+          <p style="margin-top:24px"><a href="#contact" class="btn btn-primary">Enquire about this additive</a></p>
+        </div>
+        <figure class="product-photo">
+          <img src="https://cpimg.tistatic.com/08888002/b/4/Extrusion-Coating-Lamination-Plant-for-12-Feet-Woven-Sack.jpg" alt="Extrusion coating and lamination plant for woven sack fabric" loading="lazy">
+          <figcaption>Woven sack extrusion coating line. Photo: <a href="https://www.tradeindia.com/products/extrusion-coating-lamination-plant-for-12-feet-woven-sack-c8888002.html" target="_blank" rel="noopener noreferrer">Shree Krishna Industries via TradeIndia</a>.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <section id="symptoms" class="reveal page">
     <div class="wrap">
@@ -2534,6 +2587,7 @@
         <a href="#symptoms">What We Treat</a>
         <a href="#process">Process</a>
         <a href="#expertise">Expertise</a>
+        <a href="#products">Products</a>
         <a href="#testing">Testing</a>
         <a href="#polymers">Polymer Guide</a>
         <a href="#faq">FAQ</a>
@@ -2631,6 +2685,12 @@
   // Page router — single file, multi-page navigation via hash
   var pages = document.querySelectorAll('.page');
   var navLinks = document.querySelectorAll('nav.links a, .footer-links a');
+  var menuBtn = document.querySelector('.menu-btn');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
   function showPage(id) {
     if (!document.getElementById(id)) id = 'home';
     pages.forEach(function (p) { p.classList.remove('active'); });
@@ -2640,6 +2700,8 @@
     navLinks.forEach(function (a) {
       a.classList.toggle('active', a.getAttribute('href') === '#' + id);
     });
+    header.classList.remove('nav-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
     window.scrollTo({ top: 0, behavior: 'auto' });
   }
   window.addEventListener('hashchange', function () {
