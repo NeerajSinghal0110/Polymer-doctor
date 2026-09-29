@@ -654,6 +654,21 @@
   .flame-rating-wrap th { color: var(--teal); }
   .flame-note { margin-top: 18px !important; font-size: 13px !important; line-height: 1.55; }
   .flame-note a { color: var(--teal); text-underline-offset: 3px; }
+  .mfi-feature { grid-column: 1 / -1; }
+  .mfi-feature h4 { font-size: 30px; }
+  .mfi-feature > p { max-width: 92ch; line-height: 1.6; }
+  .mfi-info { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 26px 0; }
+  .mfi-info h5 { font-size: 18px; margin: 0 0 10px; }
+  .mfi-info p, .mfi-info li { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+  .mfi-info ul { margin: 0; padding-left: 20px; }
+  .mfi-info li + li { margin-top: 7px; }
+  .mfi-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+  .mfi-gallery figure { margin: 0; overflow: hidden; border-radius: 10px; background: var(--bg-alt); }
+  .mfi-gallery img { display: block; width: 100%; height: 185px; object-fit: cover; }
+  .mfi-gallery figcaption { padding: 12px; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
+  .mfi-gallery strong { display: block; color: var(--ink); font-size: 13px; margin-bottom: 4px; }
+  .mfi-caution { margin-top: 17px !important; font-size: 12px !important; }
+  @media (max-width: 800px) { .mfi-info { grid-template-columns: 1fr; } .mfi-gallery { grid-template-columns: 1fr; } .mfi-gallery img { height: 220px; } }
   .flame-video { margin-top: 30px; padding: clamp(20px, 3vw, 30px); border-radius: 14px; background: var(--bg-alt); border: 1px solid var(--line-strong); }
   .flame-video h5 { margin-bottom: 8px; }
   .flame-video p { max-width: 80ch; line-height: 1.55; }
@@ -1567,7 +1582,20 @@
           <article class="product-range-item"><h4>Silicone Additives</h4><p>Silicone-based performance additives for polymer processing.</p></article>
           <article class="product-range-item"><h4>Oxo-biodegradable Additive Systems</h4><p>Part of our sustainability formulation work.</p></article>
           <article class="product-range-item"><h4>Exothermic Foaming Agents</h4><p>For polymer foaming applications and formulation trials.</p></article>
-          <article class="product-range-item"><h4>MFI Modification</h4><p>Solutions to adjust melt flow for processing and recycling.</p></article>
+          <article class="product-range-item mfi-feature">
+            <h4>PP MFI Enhancer</h4>
+            <p>Our polypropylene melt flow index (MFI) enhancer helps raise and tune the flow of virgin or recycled PP for the intended process. In a controlled compounding trial, improved flow can help processors convert lower-flow PP into grades more suitable for injection moulding, masterbatch production and selected extrusion applications. The final MFI depends on the starting resin, additive level and processing conditions.</p>
+            <div class="mfi-info">
+              <div><h5>Uses</h5><ul><li>Adjust recycled PP flow for thin-wall containers, buckets, plastic chairs and other moulded articles.</li><li>Prepare PP blends for colour or filler masterbatch production.</li><li>Evaluate recycled PP for nonwoven fabric and rope production, subject to strength and process trials.</li><li>Upgrade suitable film and raffia recyclate for injection moulding applications.</li></ul></div>
+              <div><h5>Application-led range</h5><p>We select the enhancer grade and loading to suit the starting PP and the target MFI: moderate flow adjustment for larger mouldings; higher flow for thin-wall mouldings and masterbatch; and tailored trials for nonwoven, rope or recycled streams. A <strong>1% addition is a trial starting point</strong>, not a guaranteed dosage or MFI increase. We check MFI and the finished product's mechanical performance before fixing a production formulation.</p></div>
+            </div>
+            <div class="mfi-gallery">
+              <figure><img src="assets/pp-mfi-moulding.svg" alt="Illustrative PP thin-wall containers with translucent lids, bucket and plastic chair" loading="lazy"><figcaption><strong>Injection moulding</strong>Thin-wall packs, buckets and plastic chairs.</figcaption></figure>
+              <figure><img src="assets/pp-mfi-nonwoven-rope.svg" alt="Illustrative PP nonwoven rolls and rope coils at a manufacturing plant" loading="lazy"><figcaption><strong>Nonwoven &amp; rope</strong>Recycled PP blends evaluated for fabric and rope lines.</figcaption></figure>
+              <figure><img src="assets/pp-mfi-recycling-masterbatch.svg" alt="Illustrative recycled PP film and raffia with a compounding line and masterbatch pellets" loading="lazy"><figcaption><strong>Recycling &amp; masterbatch</strong>Film and raffia recyclate, compounding and PP masterbatch.</figcaption></figure>
+            </div>
+            <p class="mfi-caution">Illustrative application images. Suitability and target MFI must be confirmed with the actual PP grade, processing conditions and end-use tests.</p>
+          </article>
         </div>
       </div>
       <div class="product-layout">
