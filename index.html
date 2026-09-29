@@ -654,6 +654,12 @@
   .flame-rating-wrap th { color: var(--teal); }
   .flame-note { margin-top: 18px !important; font-size: 13px !important; line-height: 1.55; }
   .flame-note a { color: var(--teal); text-underline-offset: 3px; }
+  .flame-video { margin-top: 30px; padding: clamp(20px, 3vw, 30px); border-radius: 14px; background: var(--bg-alt); border: 1px solid var(--line-strong); }
+  .flame-video h5 { margin-bottom: 8px; }
+  .flame-video p { max-width: 80ch; line-height: 1.55; }
+  .flame-video-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 17px; }
+  .flame-video-actions a { display: inline-flex; align-items: center; gap: 9px; padding: 12px 16px; border-radius: 8px; background: var(--teal); color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; }
+  .flame-video-actions a + a { background: var(--card); color: var(--teal); border: 1px solid var(--line-strong); }
   @media (max-width: 900px) { .coupling-feature { grid-template-columns: 1fr; } }
   @media (max-width: 900px) { .flame-layout { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .coupling-gallery { grid-template-columns: 1fr; } .coupling-gallery img { height: 180px; } }
@@ -1551,6 +1557,11 @@
                 <tr><td><strong>V-2</strong></td><td>30 seconds</td><td>Permitted</td></tr>
               </tbody></table>
               <p class="flame-note">A rating belongs to the tested formulation at the reported thickness; adding a flame retardant alone does not confer a V-0, V-1 or V-2 rating. Very thin films may need UL 94 VTM testing, whose VTM ratings are not equivalent to the corresponding V ratings. <a href="https://www.ul.com/services/combustion-fire-tests-plastics" target="_blank" rel="noopener noreferrer">See UL Solutions' explanation of the test methods and criteria</a>.</p>
+            </div>
+            <div class="flame-video">
+              <h5>Watch UL 94 testing</h5>
+              <p>UL Solutions' flammability webinar shows test-method animations for HB and the vertical V-0, V-1 and V-2 classifications. For the other UL 94 categories, including 5VA/5VB, thin-film VTM and foam ratings, use the accompanying test-method guide. Different test families have different procedures and their ratings are not directly interchangeable.</p>
+              <div class="flame-video-actions"><a href="https://www.ul.com/resources/plastics-recognition-program-webinar-series" target="_blank" rel="noopener noreferrer" aria-label="Watch UL Solutions flammability rating video in a new tab"><span aria-hidden="true">▶</span> Watch testing video</a><a href="https://www.ul.com/services/combustion-fire-tests-plastics" target="_blank" rel="noopener noreferrer">Explore all UL 94 test categories ↗</a></div>
             </div>
           </article>
           <article class="product-range-item"><h4>Silicone Additives</h4><p>Silicone-based performance additives for polymer processing.</p></article>
