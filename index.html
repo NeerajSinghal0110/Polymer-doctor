@@ -1292,6 +1292,43 @@
     .home-hero::before, .home-visual { animation: none; }
     .home-card, .home-applications a { transition: none; }
   }
+  /* Material recovery illustration — symbolic process, not a molecular reaction. */
+  .polymer-recovery { transform: none; padding: 30px; }
+  .polymer-recovery .home-visual-top { align-items: start; }
+  .polymer-recovery .home-visual-top strong { display: block; max-width: 13ch; line-height: 1.05; margin-top: 7px; }
+  .recovery-stage { display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: 12px; min-height: 88px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .recovery-stage:last-of-type { border-bottom: 0; }
+  .recovery-label span { display: block; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; }
+  .recovery-label strong { display: block; font-size: 13px; line-height: 1.25; }
+  .recovery-graphic { width: 100%; max-width: 320px; overflow: visible; }
+  .recovery-graphic path { fill: none; stroke: var(--coral); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .recovery-graphic circle { fill: var(--card); stroke: var(--coral); stroke-width: 3; }
+  .recovery-before .recovery-gap { stroke: var(--coral); stroke-width: 2; stroke-dasharray: 3 5; animation: recovery-pulse 2.4s ease-in-out infinite; }
+  .recovery-after .recovery-bond { stroke: var(--teal); stroke-dasharray: 380; stroke-dashoffset: 380; animation: recovery-draw 4.8s ease-in-out infinite; }
+  .recovery-after circle { stroke: var(--teal); opacity: .35; animation: recovery-nodes 4.8s ease-in-out infinite; }
+  .recovery-progress { display: flex; gap: 5px; justify-content: center; height: 8px; margin-left: 130px; }
+  .recovery-progress span { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); opacity: .3; animation: recovery-pulse 1.3s ease-in-out infinite; }
+  .recovery-progress span:nth-child(2) { animation-delay: .2s; }
+  .recovery-progress span:nth-child(3) { animation-delay: .4s; }
+  .recovery-lab { position: relative; display: flex; align-items: center; justify-content: center; gap: 9px; height: 58px; border-radius: 12px; background: var(--teal-bg); overflow: hidden; }
+  .recovery-lab i { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); animation: recovery-lab 2.8s ease-in-out infinite; }
+  .recovery-lab i:nth-child(2) { background: var(--amber); animation-delay: .35s; }
+  .recovery-lab i:nth-child(3) { background: var(--coral); animation-delay: .7s; }
+  .recovery-lab span { font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 20px; color: var(--teal); margin-left: 8px; }
+  @keyframes recovery-pulse { 50% { opacity: 1; } }
+  @keyframes recovery-lab { 50% { transform: translateY(-9px); } }
+  @keyframes recovery-draw { 0%, 12% { stroke-dashoffset: 380; opacity: .35; } 48%, 86% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 380; opacity: .35; } }
+  @keyframes recovery-nodes { 0%, 18% { opacity: .35; } 48%, 86% { opacity: 1; } 100% { opacity: .35; } }
+  @media (max-width: 600px) {
+    .polymer-recovery { padding: 20px; }
+    .recovery-stage { grid-template-columns: 105px 1fr; gap: 8px; }
+    .recovery-progress { margin-left: 105px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .recovery-before .recovery-gap, .recovery-after .recovery-bond, .recovery-after circle,
+    .recovery-progress span, .recovery-lab i { animation: none; opacity: 1; }
+    .recovery-after .recovery-bond { stroke-dashoffset: 0; }
+  }
 </style>
 </head>
 <body>
@@ -1343,14 +1380,30 @@
           </div>
           <p class="home-hero-note">Testing · Diagnosis · Formulation · Process support</p>
         </div>
-        <div class="home-visual" aria-label="Our approach: identify the issue, diagnose the cause and validate a solution">
-          <div class="home-visual-top"><div><span>How we work</span><strong>From problem to production</strong></div><div class="home-visual-status">Applied science</div></div>
-          <div class="home-visual-flow">
-            <div class="home-flow-row"><span class="home-flow-icon" aria-hidden="true">01</span><div><strong>Understand the failure</strong><small>Material, process and end-use requirements</small></div><span class="home-flow-arrow" aria-hidden="true">↗</span></div>
-            <div class="home-flow-row"><span class="home-flow-icon" aria-hidden="true">02</span><div><strong>Test what matters</strong><small>Targeted measurements and root-cause analysis</small></div><span class="home-flow-arrow" aria-hidden="true">↗</span></div>
-            <div class="home-flow-row"><span class="home-flow-icon" aria-hidden="true">03</span><div><strong>Put the fix to work</strong><small>Formulation, additive or process trial</small></div><span class="home-flow-arrow" aria-hidden="true">✓</span></div>
+        <div class="home-visual polymer-recovery" role="img" aria-label="Illustrative animation: a polymer with reduced performance is analysed, a formulation is developed, and the improved material is validated">
+          <div class="home-visual-top"><div><span>Research &amp; development</span><strong>Recovering polymer performance</strong></div><div class="home-visual-status">Material science</div></div>
+          <div class="recovery-stage">
+            <div class="recovery-label"><span>01 / Diagnose</span><strong>Lost properties</strong></div>
+            <svg class="recovery-graphic recovery-before" viewBox="0 0 320 58" aria-hidden="true">
+              <path d="M12 34 L52 17 L92 36 L130 19 M192 35 L230 18 L270 35 L307 18" />
+              <g><circle cx="12" cy="34" r="7"/><circle cx="52" cy="17" r="7"/><circle cx="92" cy="36" r="7"/><circle cx="130" cy="19" r="7"/><circle cx="192" cy="35" r="7"/><circle cx="230" cy="18" r="7"/><circle cx="270" cy="35" r="7"/><circle cx="307" cy="18" r="7"/></g>
+              <path class="recovery-gap" d="M145 25 L171 25 M158 12 L158 38" />
+            </svg>
           </div>
-          <div class="home-visual-foot">A useful result is one you can check and repeat on your line.</div>
+          <div class="recovery-progress" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="recovery-stage recovery-research">
+            <div class="recovery-label"><span>02 / Research</span><strong>Test · Formulate · Trial</strong></div>
+            <div class="recovery-lab" aria-hidden="true"><i></i><i></i><i></i><span>R&amp;D</span></div>
+          </div>
+          <div class="recovery-progress" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="recovery-stage recovery-after">
+            <div class="recovery-label"><span>03 / Validate</span><strong>Recovered performance</strong></div>
+            <svg class="recovery-graphic" viewBox="0 0 320 58" aria-hidden="true">
+              <path class="recovery-bond" d="M12 34 L52 17 L92 36 L132 19 L172 35 L212 18 L252 35 L307 18" />
+              <g><circle cx="12" cy="34" r="7"/><circle cx="52" cy="17" r="7"/><circle cx="92" cy="36" r="7"/><circle cx="132" cy="19" r="7"/><circle cx="172" cy="35" r="7"/><circle cx="212" cy="18" r="7"/><circle cx="252" cy="35" r="7"/><circle cx="307" cy="18" r="7"/></g>
+            </svg>
+          </div>
+          <div class="home-visual-foot">Illustrative process. We verify properties such as flow, impact and strength against the application target.</div>
         </div>
       </div>
     </section>
