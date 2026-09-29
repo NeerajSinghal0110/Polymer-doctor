@@ -601,6 +601,18 @@
   .product-photo img { display: block; width: 100%; height: auto; min-height: 250px; object-fit: cover; }
   .product-photo figcaption { padding: 12px 16px; color: var(--ink-faint); font-size: 12px; }
   .product-note { font-size: 13px; color: var(--ink-faint); max-width: 65ch; }
+  .product-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
+  .product-data { margin-top: 48px; padding: 30px; border: 1px solid var(--line-strong); border-radius: 16px; background: var(--card); }
+  .product-data h3 { font-size: clamp(25px, 3vw, 34px); margin-bottom: 8px; }
+  .product-data > p { color: var(--ink-soft); font-size: 14px; margin-bottom: 22px; }
+  .product-table-wrap { overflow-x: auto; }
+  .product-data table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; }
+  .product-data th, .product-data td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line-strong); }
+  .product-data th { color: var(--ink-faint); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  .product-data td:last-child { font-weight: 700; color: var(--teal); }
+  .product-caution { margin-top: 22px; padding: 18px 20px; background: var(--amber-bg); border-left: 4px solid var(--amber); border-radius: 4px; color: var(--ink); font-size: 14px; }
+  .product-caution strong { display: block; margin-bottom: 5px; }
+  .product-storage { margin-top: 18px; color: var(--ink-soft); font-size: 13px; }
   .product-range { margin-bottom: 56px; }
   .product-range h3 { font-size: clamp(24px, 2.7vw, 32px); margin-bottom: 18px; }
   .product-range-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -1477,7 +1489,7 @@
       <div class="product-layout">
         <div>
           <p class="kicker">New addition · Extrusion coating &amp; lamination</p>
-          <h2>Lamination Adhesion Additive</h2>
+          <h2>Lamination Adhesion Additive <span style="color:var(--teal)">PDRC MB399AD</span></h2>
           <p class="product-lead">An adhesion additive for extrusion coating and lamination on paper, woven sacks and aluminium foil. Start with <strong>2% addition</strong> to the polymer coating formulation.</p>
           <div class="product-benefits">
             <div class="product-benefit"><strong>Without corona treatment</strong><span>Designed to promote adhesion on suitable substrates without a separate corona treatment step.</span></div>
@@ -1486,12 +1498,29 @@
             <div class="product-benefit"><strong>Three substrates</strong><span>Applications include paper, PP woven sacks and aluminium foil.</span></div>
           </div>
           <p class="product-note">Confirm dosage, peel strength and end-use performance in a production trial; results depend on the polymer, substrate, filler level and line conditions.</p>
-          <p style="margin-top:24px"><a href="#contact" class="btn btn-primary">Enquire about this additive</a></p>
+          <div class="product-actions"><a href="#contact" class="btn btn-primary">Enquire about MB399AD</a><a href="assets/PDRC-MB399AD-TDS.pdf" class="btn btn-ghost" download="PDRC-MB399AD-TDS.pdf" type="application/pdf">Download technical data sheet (PDF)</a></div>
         </div>
         <figure class="product-photo">
           <img src="assets/woven-sack-lamination.webp" alt="Illustration of a single-side extrusion coating and lamination line for woven sack fabric" loading="lazy">
           <figcaption>Illustrative view of a woven sack extrusion coating line.</figcaption>
         </figure>
+      </div>
+      <div class="product-data">
+        <h3>MB399AD typical properties</h3>
+        <p>Values are taken from the supplied PDRC technical data sheet. Use the full PDF for test methods, handling and safety information.</p>
+        <div class="product-table-wrap"><table>
+          <thead><tr><th scope="col">Property</th><th scope="col">Test method</th><th scope="col">Typical value</th></tr></thead>
+          <tbody>
+            <tr><td>Melt index (190°C / 2.16 kg)</td><td>ISO 1133</td><td>6 g/10 min</td></tr>
+            <tr><td>Melting point</td><td>ISO 11357-3 / ASTM D3418</td><td>85°C</td></tr>
+            <tr><td>Vicat softening temperature (10 N)</td><td>ISO 306 / ASTM D1525</td><td>&lt;40°C</td></tr>
+            <tr><td>Flexural modulus</td><td>ISO 178</td><td>&lt;30 MPa</td></tr>
+            <tr><td>Elongation at break</td><td>ISO 527-2 / ASTM D638</td><td>1100%</td></tr>
+            <tr><td>Tensile strength at break</td><td>ISO 527-2 / ASTM D638</td><td>4 MPa</td></tr>
+          </tbody>
+        </table></div>
+        <div class="product-caution"><strong>Processing caution from the TDS</strong>MB399 reacts with polymers containing maleic anhydride and acid. Uncontrolled reaction may generate gels or block an extruder. Thoroughly purge the extruder before and after processing.</div>
+        <p class="product-storage">Store dry and away from moisture. Caking may occur in warm weather due to the low Vicat temperature. The stated shelf life is three years from delivery in unopened packaging; consult the full TDS for details.</p>
       </div>
 
     </div>
