@@ -624,8 +624,40 @@
   .coupling-gallery figure { margin: 0; overflow: hidden; border-radius: 10px; background: var(--bg-alt); }
   .coupling-gallery img { display: block; width: 100%; height: 185px; object-fit: cover; }
   .coupling-gallery figcaption { padding: 9px 11px; font-size: 11px; color: var(--ink-faint); }
+  .flame-feature { grid-column: 1 / -1; }
+  .flame-feature h4 { font-size: 30px; }
+  .flame-intro { max-width: 90ch; }
+  .flame-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 26px; }
+  .flame-feature h5 { font-size: 18px; margin: 0 0 10px; }
+  .flame-feature .flame-copy p + h5 { margin-top: 23px; }
+  .flame-feature .flame-copy p { line-height: 1.6; }
+  .flame-solutions { display: grid; gap: 8px; margin-top: 22px; }
+  .flame-solutions span { padding: 11px 13px; border-radius: 8px; background: var(--bg-alt); font-size: 13px; color: var(--ink-soft); }
+  .flame-solutions strong { color: var(--ink); }
+  .flame-flow { display: grid; gap: 12px; align-content: center; padding: 24px; border-radius: 14px; background: var(--ink); color: #fff; }
+  .flame-flow > strong { font-family: 'Big Shoulders Display', sans-serif; font-size: 24px; margin-bottom: 2px; }
+  .flame-step { display: grid; grid-template-columns: 38px 1fr; align-items: center; gap: 12px; padding: 13px; border: 1px solid rgba(255,255,255,.20); border-radius: 10px; background: rgba(255,255,255,.06); }
+  .flame-step i { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,.14); font-style: normal; color: #fff; }
+  .flame-step:nth-of-type(1) i { color: #ffab7c; }
+  .flame-step:nth-of-type(2) i { color: #f4ce7c; }
+  .flame-step:nth-of-type(3) i { color: #a6e4df; }
+  .flame-step span { font-size: 13px; line-height: 1.35; }
+  .flame-step:nth-of-type(1) { animation: flame-step-glow 5.4s ease-in-out infinite; }
+  .flame-step:nth-of-type(2) { animation: flame-step-glow 5.4s ease-in-out 1.2s infinite; }
+  .flame-step:nth-of-type(3) { animation: flame-step-glow 5.4s ease-in-out 2.4s infinite; }
+  @keyframes flame-step-glow { 0%, 65%, 100% { border-color: rgba(255,255,255,.20); transform: none; } 20% { border-color: #f4ce7c; transform: translateX(4px); } }
+  .flame-rating-wrap { margin-top: 32px; overflow-x: auto; }
+  .flame-rating-wrap h5 { margin-bottom: 6px; }
+  .flame-rating-wrap > p { margin-bottom: 16px; }
+  .flame-rating-wrap table { width: 100%; min-width: 530px; border-collapse: collapse; font-size: 13px; }
+  .flame-rating-wrap th, .flame-rating-wrap td { padding: 12px; text-align: left; border-bottom: 1px solid var(--line-strong); vertical-align: top; }
+  .flame-rating-wrap th { color: var(--teal); }
+  .flame-note { margin-top: 18px !important; font-size: 13px !important; line-height: 1.55; }
+  .flame-note a { color: var(--teal); text-underline-offset: 3px; }
   @media (max-width: 900px) { .coupling-feature { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .flame-layout { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .coupling-gallery { grid-template-columns: 1fr; } .coupling-gallery img { height: 180px; } }
+  @media (prefers-reduced-motion: reduce) { .flame-step { animation: none !important; } }
   @media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
   @media (max-width: 900px) { .product-range-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .product-benefits { grid-template-columns: 1fr; } }
@@ -1492,7 +1524,35 @@
               <figure><img src="assets/twin-screw-strand-pelletizing.webp" alt="Illustration of strands cooling and pelletizing on a twin-screw compounding line" loading="lazy"><figcaption>Illustrative strand cooling and pelletizing</figcaption></figure>
             </div>
           </article>
-          <article class="product-range-item"><h4>Flame Retardants</h4><p>Additive solutions for flame-retardant formulations.</p></article>
+          <article class="product-range-item flame-feature">
+            <h4>Flame Retardants</h4>
+            <p class="flame-intro">Many polymers can ignite and continue to burn when exposed to a flame. Flame retardants are added to reduce fire growth and help a finished formulation meet the fire-performance requirement for its intended use. The result depends on the polymer, loading, processing and finished-part or film thickness.</p>
+            <div class="flame-layout">
+              <div class="flame-copy">
+                <h5>How do they work?</h5>
+                <p>Different chemistries act in different ways. Some interrupt flame reactions in the gas phase. Others encourage a protective char or barrier on the polymer surface, reducing the heat and fuel reaching the flame. A formulation may use more than one mechanism.</p>
+                <h5>Our range</h5>
+                <p>We provide both <strong>halogenated</strong> and <strong>non-halogenated</strong> flame-retardant systems. We also develop flame-retardant options for <strong>transparent film applications</strong>, where clarity, haze, film thickness and the relevant fire test must be considered together.</p>
+                <div class="flame-solutions"><span><strong>Halogenated:</strong> selected where the polymer, processing conditions and target performance suit the system.</span><span><strong>Non-halogenated:</strong> options selected for the required polymer, application and performance.</span><span><strong>Transparent films:</strong> formulations chosen with optical appearance and thin-film testing in mind.</span></div>
+              </div>
+              <div class="flame-flow">
+                <strong>Fire response, step by step</strong>
+                <div class="flame-step"><i aria-hidden="true">1</i><span>Heat causes a polymer to release combustible vapours.</span></div>
+                <div class="flame-step"><i aria-hidden="true">2</i><span>The selected additive acts in the flame, at the surface, or both.</span></div>
+                <div class="flame-step"><i aria-hidden="true">3</i><span>Less heat or fuel feeds the flame; the tested formulation may self-extinguish.</span></div>
+              </div>
+            </div>
+            <div class="flame-rating-wrap">
+              <h5>What do V-0, V-1 and V-2 mean?</h5>
+              <p>These are UL 94 vertical-burning classifications for a <em>tested material formulation and specimen thickness</em>. They describe afterflame time and whether flaming drips ignite cotton below the specimen.</p>
+              <table><thead><tr><th scope="col">UL 94 rating</th><th scope="col">Maximum afterflame time, each application</th><th scope="col">Flaming drips that ignite cotton</th></tr></thead><tbody>
+                <tr><td><strong>V-0</strong></td><td>10 seconds</td><td>Not permitted</td></tr>
+                <tr><td><strong>V-1</strong></td><td>30 seconds</td><td>Not permitted</td></tr>
+                <tr><td><strong>V-2</strong></td><td>30 seconds</td><td>Permitted</td></tr>
+              </tbody></table>
+              <p class="flame-note">A rating belongs to the tested formulation at the reported thickness; adding a flame retardant alone does not confer a V-0, V-1 or V-2 rating. Very thin films may need UL 94 VTM testing, whose VTM ratings are not equivalent to the corresponding V ratings. <a href="https://www.ul.com/services/combustion-fire-tests-plastics" target="_blank" rel="noopener noreferrer">See UL Solutions' explanation of the test methods and criteria</a>.</p>
+            </div>
+          </article>
           <article class="product-range-item"><h4>Silicone Additives</h4><p>Silicone-based performance additives for polymer processing.</p></article>
           <article class="product-range-item"><h4>Oxo-biodegradable Additive Systems</h4><p>Part of our sustainability formulation work.</p></article>
           <article class="product-range-item"><h4>Exothermic Foaming Agents</h4><p>For polymer foaming applications and formulation trials.</p></article>
