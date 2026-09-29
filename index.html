@@ -663,12 +663,13 @@
   .mfi-info ul { margin: 0; padding-left: 20px; }
   .mfi-info li + li { margin-top: 7px; }
   .mfi-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+  .mfi-gallery.two-up { grid-template-columns: repeat(2, 1fr); }
   .mfi-gallery figure { margin: 0; overflow: hidden; border-radius: 10px; background: var(--bg-alt); }
   .mfi-gallery img { display: block; width: 100%; height: 185px; object-fit: cover; }
   .mfi-gallery figcaption { padding: 12px; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
   .mfi-gallery strong { display: block; color: var(--ink); font-size: 13px; margin-bottom: 4px; }
   .mfi-caution { margin-top: 17px !important; font-size: 12px !important; }
-  @media (max-width: 800px) { .mfi-info { grid-template-columns: 1fr; } .mfi-gallery { grid-template-columns: 1fr; } .mfi-gallery img { height: 220px; } }
+  @media (max-width: 800px) { .mfi-info { grid-template-columns: 1fr; } .mfi-gallery, .mfi-gallery.two-up { grid-template-columns: 1fr; } .mfi-gallery img { height: 220px; } }
   .flame-video { margin-top: 30px; padding: clamp(20px, 3vw, 30px); border-radius: 14px; background: var(--bg-alt); border: 1px solid var(--line-strong); }
   .flame-video h5 { margin-bottom: 8px; }
   .flame-video p { max-width: 80ch; line-height: 1.55; }
@@ -1609,6 +1610,19 @@
               <figure><img src="assets/pp-reducer-recycling.svg" alt="Illustrative recycled polypropylene compounding line" loading="lazy"><figcaption><strong>Recycled PP compounds</strong>Adjusting flow and toughness in recycled blends.</figcaption></figure>
             </div>
             <p class="mfi-caution">Illustrative application images. Final properties depend on the polymer formulation, additive loading, processing and part design; verify performance in the finished application.</p>
+          </article>
+          <article class="product-range-item mfi-feature">
+            <h4>HDPE MFI Reducer</h4>
+            <p>A performance additive for HDPE formulations where the incoming material has more melt flow than the process needs. Our MFI reducer is designed to lower the measured melt flow index and improve melt strength in a suitable HDPE blend. This can help processors evaluate recycled or off-specification streams for more stable extrusion or blow moulding, subject to the finished product's required tests.</p>
+            <div class="mfi-info">
+              <div><h5>Uses and applications</h5><ul><li><strong>HDPE pipe extrusion:</strong> target a more suitable flow and melt strength for stable processing and wall-thickness control.</li><li><strong>Drums and containers:</strong> evaluate recycled HDPE for blow-moulded drums, jerrycans and industrial containers.</li><li><strong>Recycled HDPE compounds:</strong> tune variable feedstock toward a specified processing window before production.</li></ul></div>
+              <div><h5>Starting a trial</h5><p>The supplied product reference proposes <strong>1% addition as a starting trial dosage</strong>. We measure the feedstock MFI, compound a trial batch and check the resulting MFI and melt behaviour. Pipe applications also require the appropriate pressure, slow-crack-growth and other qualification tests; a lower MFI by itself does not establish a PE100 rating or suitability for pressure service.</p></div>
+            </div>
+            <div class="mfi-gallery two-up">
+              <figure><img src="assets/hdpe-reducer-pipe.svg" alt="Illustrative HDPE pipe extrusion and cooling line" loading="lazy"><figcaption><strong>HDPE pipe extrusion</strong>Flow adjustment and stable extrusion trials for pipe compounds.</figcaption></figure>
+              <figure><img src="assets/hdpe-reducer-drums.svg" alt="Illustrative HDPE drums, jerrycans and recycled HDPE material" loading="lazy"><figcaption><strong>Drums &amp; recycled HDPE</strong>Blow-moulding and recycled material evaluation.</figcaption></figure>
+            </div>
+            <p class="mfi-caution">Illustrative application images. The final grade, dosage and end-use performance must be verified on the actual HDPE feedstock and production line.</p>
           </article>
         </div>
       </div>
