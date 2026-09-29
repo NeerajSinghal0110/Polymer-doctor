@@ -619,6 +619,13 @@
   .product-range-item { background: var(--card); border: 1px solid var(--line-strong); border-radius: 4px; padding: 22px; }
   .product-range-item h4 { font-family: 'Big Shoulders Display', sans-serif; font-size: 22px; margin: 0 0 8px; }
   .product-range-item p { color: var(--ink-soft); font-size: 14px; margin: 0; }
+  .coupling-feature { grid-column: 1 / -1; display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: center; }
+  .coupling-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .coupling-gallery figure { margin: 0; overflow: hidden; border-radius: 10px; background: var(--bg-alt); }
+  .coupling-gallery img { display: block; width: 100%; height: 185px; object-fit: cover; }
+  .coupling-gallery figcaption { padding: 9px 11px; font-size: 11px; color: var(--ink-faint); }
+  @media (max-width: 900px) { .coupling-feature { grid-template-columns: 1fr; } }
+  @media (max-width: 520px) { .coupling-gallery { grid-template-columns: 1fr; } .coupling-gallery img { height: 180px; } }
   @media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
   @media (max-width: 900px) { .product-range-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .product-benefits { grid-template-columns: 1fr; } }
@@ -1478,7 +1485,13 @@
       <div class="product-range">
         <h3>Existing additive range</h3>
         <div class="product-range-grid">
-          <article class="product-range-item"><h4>Coupling Agents</h4><p>We make coupling agents by grafting maleic anhydride (MAH) or glycidyl methacrylate (GMA) onto different polymer bases selected for the resin and application. The selected backbone is compatible with the base polymer, while the grafted anhydride or epoxy groups can interact with, or react with, suitable polar fillers, fibres and other polymer phases. This helps improve dispersion and adhesion at the interface. We select the polymer base and graft chemistry to suit each requirement and confirm performance in a processing trial.</p></article>
+          <article class="product-range-item coupling-feature">
+            <div><h4>Coupling Agents</h4><p>We make coupling agents by grafting maleic anhydride (MAH) or glycidyl methacrylate (GMA) onto different polymer bases selected for the resin and application. The selected backbone is compatible with the base polymer, while the grafted anhydride or epoxy groups can interact with, or react with, suitable polar fillers, fibres and other polymer phases. This helps improve dispersion and adhesion at the interface. We select the polymer base and graft chemistry to suit each requirement and confirm performance in a processing trial.</p></div>
+            <div class="coupling-gallery">
+              <figure><img src="assets/twin-screw-compounding-line.webp" alt="Illustration of a running twin-screw polymer compounding line" loading="lazy"><figcaption>Illustrative twin-screw compounding line</figcaption></figure>
+              <figure><img src="assets/twin-screw-strand-pelletizing.webp" alt="Illustration of strands cooling and pelletizing on a twin-screw compounding line" loading="lazy"><figcaption>Illustrative strand cooling and pelletizing</figcaption></figure>
+            </div>
+          </article>
           <article class="product-range-item"><h4>Flame Retardants</h4><p>Additive solutions for flame-retardant formulations.</p></article>
           <article class="product-range-item"><h4>Silicone Additives</h4><p>Silicone-based performance additives for polymer processing.</p></article>
           <article class="product-range-item"><h4>Oxo-biodegradable Additive Systems</h4><p>Part of our sustainability formulation work.</p></article>
