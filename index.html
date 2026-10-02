@@ -1413,6 +1413,34 @@
     .recovery-after .recovery-bond { stroke-dashoffset: 0; }
   }
 </style>
+<style>
+#industries .industry-hero{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:center;padding:38px 0 64px}
+#industries .industry-hero h2{font-family:'Big Shoulders Display',sans-serif;font-size:clamp(42px,6vw,76px);line-height:1.04;margin:12px 0 22px}
+#industries .industry-hero p{max-width:660px;color:var(--ink-soft);margin-bottom:24px}
+#industries .sector-tag{text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:700;color:var(--teal)}
+#industries .industry-cycle{padding:30px;border:1px solid rgba(0,0,0,.12);border-radius:24px;background:linear-gradient(140deg,rgba(0,128,128,.08),rgba(240,180,70,.1))}
+#industries .cycle-node{display:block;text-align:center;font-size:24px;font-weight:600;padding:16px;background:var(--paper,#fff);border-radius:12px;animation:sector-glow 6s ease-in-out infinite}
+#industries .cycle-node:nth-of-type(3){animation-delay:2s}#industries .cycle-node:nth-of-type(5){animation-delay:4s}
+#industries .cycle-node small{display:block;font-size:12px;font-weight:400;margin-top:5px}
+#industries .cycle-link{display:block;height:28px;width:2px;background:var(--teal);margin:0 auto;position:relative;overflow:hidden}
+#industries .cycle-link:after{content:'';position:absolute;top:-10px;height:10px;width:2px;background:var(--amber);animation:sector-flow 1.8s linear infinite}
+#industries .sector-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+#industries .sector-card{position:relative;padding:30px;border:1px solid rgba(0,0,0,.12);border-radius:18px;transition:transform .25s,box-shadow .25s;background:rgba(255,255,255,.45)}
+#industries .sector-card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(0,0,0,.07)}
+#industries .sector-number{position:absolute;right:24px;top:20px;font-size:30px;opacity:.15;font-weight:700}
+#industries .sector-card h3{font-size:25px;line-height:1.2;margin:12px 0}
+#industries .sector-card p{font-size:15px;line-height:1.7;color:var(--ink-soft)}
+#industries details{margin-top:20px;border-top:1px solid rgba(0,0,0,.12);padding-top:16px}
+#industries summary{cursor:pointer;font-weight:600;font-size:14px;color:var(--teal)}
+#industries summary:focus-visible{outline:2px solid var(--teal);outline-offset:5px}
+#industries .sector-detail{padding-top:15px}#industries .sector-detail h4{margin:12px 0 4px;font-size:14px}
+#industries .sector-detail a,#industries .industry-note a{color:var(--teal);font-weight:600}
+#industries .industry-note{margin-top:32px;padding:30px;border-radius:18px;background:rgba(0,128,128,.06)}
+#industries .industry-note strong{font-size:23px}#industries .industry-note p{line-height:1.7;margin:14px 0}
+@keyframes sector-flow{to{transform:translateY(40px)}}@keyframes sector-glow{0%,65%,100%{box-shadow:0 0 0 0 rgba(0,128,128,0)}15%,35%{box-shadow:0 0 0 5px rgba(0,128,128,.12)}}
+@media(max-width:700px){#industries .industry-hero,#industries .sector-grid{grid-template-columns:1fr}#industries .industry-hero{gap:24px;padding-top:12px}#industries .sector-card{padding:24px}}
+@media(prefers-reduced-motion:reduce){#industries *{animation:none!important;transition:none!important}#industries .sector-card:hover{transform:none}}
+</style>
 </head>
 <body>
 
@@ -2684,31 +2712,19 @@
   </section>
 
   <section id="industries" class="reveal page">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Who we work with</h2>
-        <p>Different points in the polymer supply chain run into different problems — we adjust the diagnosis accordingly.</p>
-      </div>
-      <div class="industries">
-        <div class="industry-card">
-          <div class="industry-title">Processors</div>
-          <div class="industry-desc">Injection molders, extruders and blow molders chasing down defects, scrap rates, or processing-window problems.</div>
-        </div>
-        <div class="industry-card">
-          <div class="industry-title">Recyclers</div>
-          <div class="industry-desc">PCR and PIR operations working to hit consistent, sellable spec out of a variable feedstock.</div>
-        </div>
-        <div class="industry-card">
-          <div class="industry-title">Compounders</div>
-          <div class="industry-desc">Custom formulators validating new blends, additive packages, and performance claims before they scale.</div>
-        </div>
-        <div class="industry-card">
-          <div class="industry-title">Manufacturers</div>
-          <div class="industry-desc">Product companies troubleshooting a material that's failing in the field or falling short of a design spec.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="wrap">
+<div class="industry-hero"><div><p class="sector-tag">Industries & applications</p><h2>Better polymers.<br>Stronger possibilities.</h2><p>Explore how Polymer Doctor supports recycling, manufacturing and product development with functional additives, polymer testing and practical process consultancy.</p><a class="btn btn-primary" href="#contact">Discuss your material challenge</a></div><div class="industry-cycle" aria-label="Our approach: diagnose, formulate, validate"><span class="cycle-node">Diagnose<small>Understand the material</small></span><span class="cycle-link" aria-hidden="true"></span><span class="cycle-node">Formulate<small>Select the right solution</small></span><span class="cycle-link" aria-hidden="true"></span><span class="cycle-node">Validate<small>Test on your application</small></span></div></div>
+<div class="section-head"><h2>Find your application</h2><p>Select a sector below to explore common challenges, relevant solutions and typical end uses.</p></div>
+<div class="sector-grid"><article class="sector-card"><span class="sector-number">01</span><p class="sector-tag">PP · HDPE · LDPE · Nylon</p><h3>Recycling & recovered polymers</h3><p>Variable melt flow, reduced impact strength and inconsistent batches can limit the value of recycled material.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>MFI adjustment, impact modification and formulation trials supported by material identification and performance testing.</p><h4>Typical applications</h4><p>Recycled granules, extrusion feedstock and injection moulding grades.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">02</span><p class="sector-tag">Blown film · Transparent film</p><h3>Films & flexible packaging</h3><p>Unstable bubbles, inconsistent film strength and filler dispersion problems can disrupt film production.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>LDPE modifier trials, melt-flow control and evaluation of filler loading. Flame-retardant options are also available for transparent film applications.</p><h4>Typical applications</h4><p>Packaging films, liners and industrial films.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">03</span><p class="sector-tag">Paper · PP/HDPE fabric · Aluminium</p><h3>Lamination & woven sacks</h3><p>Poor bonding between layers can lead to peeling and inconsistent laminate quality.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>Adhesion additive trials for paper, woven fabric and aluminium lamination. Assess the 2% starting dosage, corona-free processing suitability and recycled-material or filler use on your line.</p><h4>Typical applications</h4><p>Woven sacks, coated paper and multilayer laminates.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">04</span><p class="sector-tag">PP · ABS · Nylon · Engineering plastics</p><h3>Injection moulding</h3><p>Incomplete filling, brittle parts and variable flow can affect both appearance and product performance.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>Select melt-flow and impact modification for the resin and part geometry, then validate moulding conditions and mechanical properties.</p><h4>Typical applications</h4><p>Plastic chairs, buckets, containers and industrial components.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">05</span><p class="sector-tag">HDPE · PP · Nylon</p><h3>Pipes, profiles & rods</h3><p>Extrusion needs controlled flow and sufficient melt strength to maintain shape and consistency.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>MFI reducer and impact-modifier trials, with rheology and mechanical testing appropriate to the finished product.</p><h4>Typical applications</h4><p>Pipes, profiles, nylon rods and extruded components.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">06</span><p class="sector-tag">Grafted polymers · Filled blends</p><h3>Compounding & masterbatch</h3><p>Incompatible polymers and weak filler-to-polymer bonding can reduce the performance of a blend.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>Maleic-anhydride or glycidyl-methacrylate grafted coupling agents on a suitable polymer base, plus formulation and dispersion assessment.</p><h4>Typical applications</h4><p>Filled compounds, polymer blends and functional masterbatches.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">07</span><p class="sector-tag">Halogenated · Non-halogen options</p><h3>Electrical & flame-retardant products</h3><p>Fire-performance requirements must be considered alongside strength, processing and appearance.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>Select a flame-retardant system for the resin and application; test the actual formulation and specimen thickness against the required classification.</p><h4>Typical applications</h4><p>Electrical housings, components and specialised films.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article>
+<article class="sector-card"><span class="sector-number">08</span><p class="sector-tag">Research · Testing · Consultancy</p><h3>Product development & failure analysis</h3><p>A failed component or a new formulation needs evidence before changes are made at production scale.</p><details><summary>Explore solutions & applications</summary><div class="sector-detail"><h4>How Polymer Doctor helps</h4><p>Material identification, thermal and mechanical evaluation, failure investigation and comparative trials to guide development.</p><h4>Typical applications</h4><p>New products, material substitution and troubleshooting.</p><a href="#contact">Discuss your application &rarr;</a></div></details></article></div>
+<div class="industry-note"><strong>From sample to production</strong><p>Share your polymer grade, current MFI, processing conditions, additive dosage and target properties. We use these details to recommend testing and a suitable trial plan. Results depend on the material, formulation and processing conditions; final performance should be validated on your product.</p><a href="#testing">Explore our testing services &rarr;</a></div>
+</div></section>
 
   <section id="contact" class="reveal page" style="border-bottom: none;">
     <div class="wrap">
