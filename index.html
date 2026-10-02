@@ -1441,6 +1441,23 @@
 @media(max-width:700px){#industries .industry-hero,#industries .sector-grid{grid-template-columns:1fr}#industries .industry-hero{gap:24px;padding-top:12px}#industries .sector-card{padding:24px}}
 @media(prefers-reduced-motion:reduce){#industries *{animation:none!important;transition:none!important}#industries .sector-card:hover{transform:none}}
 </style>
+<style>
+#process .journey-kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--teal);font-weight:700;margin-bottom:12px}
+#process .solution-journey{list-style:none;margin:36px 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+#process .journey-step{position:relative;padding:28px 22px;border:1px solid rgba(0,0,0,.12);border-radius:16px;background:rgba(255,255,255,.45);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+#process .journey-step:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.07)}
+#process .journey-number{width:48px;height:48px;display:grid;place-items:center;border-radius:50%;background:var(--teal);color:white;font-weight:700;margin-bottom:24px;animation:journey-pulse 8s ease-in-out infinite;animation-delay:var(--journey-delay)}
+#process .journey-step h3{font-size:23px;line-height:1.2;margin:0 0 14px}
+#process .journey-step p{font-size:15px;line-height:1.75;color:var(--ink-soft);margin:0 0 24px;flex:1}
+#process .journey-outcome{border-top:1px solid rgba(0,0,0,.1);padding-top:14px;color:var(--teal);font-size:12px;font-weight:700;letter-spacing:.02em}
+#process .journey-step:not(:last-child):after{content:'→';position:absolute;right:-18px;top:42px;color:var(--teal);font-size:22px;z-index:1}
+#process .journey-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px;border-radius:16px;background:rgba(0,128,128,.06)}
+#process .journey-cta strong{font-size:23px}#process .journey-cta p{margin:8px 0 0;color:var(--ink-soft)}
+@keyframes journey-pulse{0%,26%,100%{box-shadow:0 0 0 0 rgba(0,128,128,0)}8%,18%{box-shadow:0 0 0 8px rgba(0,128,128,.15)}}
+@media(max-width:1000px){#process .solution-journey{grid-template-columns:repeat(2,minmax(0,1fr))}#process .journey-step:after{display:none}}
+@media(max-width:600px){#process .solution-journey{grid-template-columns:1fr}#process .journey-cta{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){#process *{animation:none!important;transition:none!important}#process .journey-step:hover{transform:none}}
+</style>
 </head>
 <body>
 
@@ -1766,36 +1783,14 @@
     </div>
   </section>
 
-  <section id="process" class="reveal page">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>How we work</h2>
-        <p>Every case moves through the same four stages, whether it's a one-off failure or an ongoing formulation project.</p>
-      </div>
-      <div class="process">
-        <div class="process-step">
-          <div class="step-num">01</div>
-          <div class="step-title">Intake</div>
-          <div class="step-desc">You send samples and describe what's going wrong on the line — a defect, a spec miss, a customer complaint. We define what "fixed" looks like before testing starts.</div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <div class="step-title">Diagnose</div>
-          <div class="step-desc">We run the testing needed to find the actual cause — not just confirm the symptom — comparing against spec, virgin material, or a reference sample.</div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <div class="step-title">Prescribe</div>
-          <div class="step-desc">You get a specific, commercially workable fix: an additive package, a process change, a blend ratio — something your line can actually run.</div>
-        </div>
-        <div class="process-step">
-          <div class="step-num">04</div>
-          <div class="step-title">Validate</div>
-          <div class="step-desc">We test the treated material or trial run against the original target so you can confirm the fix before committing to production volume.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="process" class="reveal page"><div class="wrap">
+<div class="section-head"><p class="journey-kicker">How we work</p><h2>From Polymer Problem to Practical Solution</h2><p>A clear path from understanding your material to validating a solution for your application.</p></div>
+<ol class="solution-journey"><li class="journey-step" style="--journey-delay:0s"><span class="journey-number">01</span><h3>Share your challenge</h3><p>Tell us the polymer, application, processing issue and properties you want to achieve. Share samples, current MFI and line conditions where available.</p><span class="journey-outcome">A clear target</span></li>
+<li class="journey-step" style="--journey-delay:2s"><span class="journey-number">02</span><h3>Test & diagnose</h3><p>We select relevant tests and compare your material with the required specification or a reference sample to investigate the cause.</p><span class="journey-outcome">An evidence-based diagnosis</span></li>
+<li class="journey-step" style="--journey-delay:4s"><span class="journey-number">03</span><h3>Develop the solution</h3><p>We recommend suitable additives, formulation changes or processing adjustments based on the findings and your production requirements.</p><span class="journey-outcome">A practical trial plan</span></li>
+<li class="journey-step" style="--journey-delay:6s"><span class="journey-number">04</span><h3>Trial & validate</h3><p>Evaluate the proposed solution on your line and test the resulting material against the agreed targets before scaling production.</p><span class="journey-outcome">Verified performance</span></li></ol>
+<div class="journey-cta"><div><strong>Start with your material challenge</strong><p>Share what is happening, what you have tried and the result you need.</p></div><a href="#contact" class="btn btn-primary">Discuss your case &rarr;</a></div>
+</div></section>
 
   <section id="expertise" class="reveal page">
     <div class="wrap">
